@@ -25,6 +25,10 @@ app.get('/api/health', (req, res) => {
 
 // API Routes
 app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/courses', require('./routes/courseRoutes'));
+app.use('/api/modules', require('./routes/moduleRoutes'));
+app.use('/api', require('./routes/enrollmentRoutes'));
+app.use('/api', require('./routes/progressRoutes'));
 
 // Test routes for RBAC
 const { protect } = require('./middleware/authMiddleware');

@@ -25,7 +25,6 @@ const protect = async (req, res, next) => {
           errorCode: 'UNAUTHORIZED'
         });
       }
-
       next();
     } catch (error) {
       return res.status(401).json({
